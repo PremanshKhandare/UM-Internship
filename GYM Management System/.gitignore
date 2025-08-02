@@ -1,5 +1,9 @@
-# Dependency directories
-node_modules/
+# Firebase debug logs
+firebase-debug.log
 
-# Firebase cache
-.firebase/
+# VS Code settings
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
