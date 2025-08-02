@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Cozy Gym</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+    <div class="dashboard">
+        <h2>Welcome, Admin</h2>
+        <button class="logout-button" onclick="logout()">Logout</button><br><br>
+
+        <section>
+            <h3 id="formTitle">Add Member</h3>
+            <input type="hidden" id="memberId">
+            <input type="text" id="memberName" placeholder="Full Name">
+            <input type="email" id="memberEmail" placeholder="Email">
+            <input type="text" id="feePackage" placeholder="Fee Package (Gold/Silver/etc)">
+            <button onclick="submitMember()">Submit</button>
+            <p id="add-msg"></p>
+        </section>
+
+
+        <section>
+            <h3>Member List</h3>
+            <ul id="memberList"></ul>
+        </section>
+
+        <section>
+            <h3>Create Bill</h3>
+            <select id="billMemberSelect">
+                <option value="">Select Member</option>
+            </select>
+            <input type="number" id="billAmount" placeholder="Enter Amount (₹)">
+            <input type="text" id="billPackage" placeholder="Fee Package (e.g., Gold)">
+            <button onclick="createBill()">Create Bill</button>
+            <p id="bill-msg"></p>
+        </section>
+
+        <section>
+            <h3>Billing Records</h3>
+            <ul id="billList"></ul>
+        </section>
+
+        <section>
+            <h3>Send Monthly Notification</h3>
+            <select id="notifyMemberSelect">
+                <option value="">Select Member</option>
+            </select>
+            <textarea id="notifyMessage" placeholder="Write message..." rows="3"></textarea>
+            <button onclick="sendNotification()">Send Notification</button>
+            <p id="notify-msg"></p>
+        </section>
+
+        <section>
+            <h3>Add Supplement</h3>
+            <input type="text" id="supplementName" placeholder="Supplement Name">
+            <textarea id="supplementDesc" placeholder="Description" rows="2"></textarea>
+            <input type="number" id="supplementPrice" placeholder="Price ₹">
+            <button onclick="addSupplement()">Add Supplement</button>
+            <p id="supp-msg"></p>
+        </section>
+
+        <section>
+            <h3>Supplement List</h3>
+            <ul id="supplementList"></ul>
+        </section>
+
+        <section>
+            <h3>Assign Diet Plan</h3>
+            <select id="dietMemberSelect">
+                <option value="">Select Member</option>
+            </select>
+            <textarea id="dietPlan" placeholder="Enter Diet Plan..." rows="3"></textarea>
+            <button onclick="assignDiet()">Assign Diet</button>
+            <p id="diet-msg"></p>
+        </section>
+
+        <section>
+            <h3>Diet Assignments</h3>
+            <ul id="dietList"></ul>
+        </section>
+
+        <section>
+            <h3>Export Billing Report</h3>
+            <button onclick="exportBillingReport()">Download CSV</button>
+            <p id="export-msg"></p>
+        </section>
+
+
+    </div>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

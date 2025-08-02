@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make a Reservation - Cozy Catering</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Cozy Catering" class="logo">
+        <h1>Cozy Catering</h1>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">My Reservations</a>
+        <a href="#" id="logout-btn" style="display: none;">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 style="text-align: center; margin-top: 2rem;">📅 Book Your Reservation</h1>
+    
+    <section class="form-section">
+      <form id="reserve-form">
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" required>
+
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" min="1" required>
+
+        <label for="notes">Special Requests:</label>
+        <textarea id="notes" rows="4" placeholder="Allergies, setup, etc."></textarea>
+
+        <button type="submit">Reserve Now</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cozy Catering. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/reservation.js"></script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

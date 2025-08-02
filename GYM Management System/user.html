@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome | Cozy Gym</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <h2 class="welcome-heading">Welcome to Cozy Gym !!</h2>
+    <button class="logout-button" onclick="logout()">Logout</button>
+
+    <img class="banner-img" src="assets/banner.png" alt="Gym Banner" />
+
+    <section class="about">
+      <h3>About Cozy Gym</h3>
+      <p>
+        Cozy Gym is your personal fitness heaven — blending modern equipment, expert trainers,
+        and a supportive environment to help you achieve your fitness goals. Whether you're a
+        beginner or a pro, we're here to make your journey enjoyable and effective.
+      </p>
+    </section>
+
+    <section class="plans">
+      <h3>Our Subscription Plans</h3>
+      <div class="plan-card basic">
+        <img src="assets/basic.png" alt="Basic Plan">
+        <div>
+          <strong>Basic – ₹999/month</strong><br>Access to gym floor & locker
+        </div>
+      </div>
+      <div class="plan-card silver">
+        <img src="assets/silver.png" alt="Silver Plan">
+        <div>
+          <strong>Silver – ₹1499/month</strong><br>Includes group classes & diet plan
+        </div>
+      </div>
+      <div class="plan-card gold">
+        <img src="assets/gold.png" alt="Gold Plan">
+        <div>
+          <strong>Gold – ₹1999/month</strong><br>Includes personal trainer, spa, and all features
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Our Supplement Store</h3><br>
+      <ul id="storeSupplements"></ul>
+    </section>
+
+    <section>
+      <h3>Search Members</h3>
+      <input type="text" id="searchInput" placeholder="Enter name or email">
+      <button onclick="searchMember()">Search</button>
+      <ul id="searchResults"></ul>
+    </section>
+  </div>
+
+
+  <script src="js/firebase.js"></script>
+  <script src="js/user.js"></script>
+</body>
+
+</html>

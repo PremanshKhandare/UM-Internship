@@ -1,0 +1,36 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Register | Cozy Gym</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore-compat.js"></script>
+
+</head>
+
+<body>
+  <div class="login-wrapper">
+    <div class="login-container">
+      <h2>Register</h2>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPassword" placeholder="Password" required>
+      <select id="regRole">
+        <option value="admin">Admin</option>
+        <option value="member">Member</option>
+        <option value="user">User</option>
+      </select>
+      <button onclick="register()">Register</button>
+      <p id="reg-msg"></p>
+    </div>
+  </div>
+
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+
+
+</html>

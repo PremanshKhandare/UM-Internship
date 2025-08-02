@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Cozy Catering</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Cozy Catering" class="logo">
+        <h1>Cozy Catering</h1>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 style="text-align: center; margin-top: 2rem;">🔐 Login</h1>
+    <section class="form-section">
+      <h2>Login or Register</h2>
+      <form id="authForm">
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <select name="role">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit" id="loginBtn">Login</button>
+        <button type="button" id="registerBtn">Register</button>
+      </form>
+
+
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+
+</html>

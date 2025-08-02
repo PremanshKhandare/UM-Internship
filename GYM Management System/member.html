@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member Dashboard | Cozy Gym</title>
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Firebase compat SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore-compat.js"></script>
+
+  <!-- Shared Firebase config -->
+  <script src="js/firebase.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Welcome, Member</h2>
+    <button class="logout-button" onclick="logout()">Logout</button><br><br>
+    <section>
+      <h3>Your Bills</h3>
+      <ul id="memberBills"></ul>
+    </section>
+
+    <section>
+      <h3>Notifications</h3>
+      <ul id="memberNotifications"></ul>
+    </section>
+
+    <section>
+      <h3>Diet Plan</h3>
+      <p id="memberDiet">Loading...</p>
+    </section>
+  </div>
+
+  <!-- 🔑 Only ONE script controls the page -->
+  <script src="js/member.js"></script>
+</body>
+</html>

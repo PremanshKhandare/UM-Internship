@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cozy Catering - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/logo.png">
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Cozy Catering" class="logo">
+        <h1>Cozy Catering</h1>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservation.html">Reserve</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">signup</a>
+        <a href="#" id="logout-btn" style="display: none;">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <h2>Welcome to Cozy Catering 🍽️</h2>
+      <p>Authentic flavors, unforgettable events.</p>
+      <a href="menu.html" class="btn">Explore Our Menu</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-text">
+        <h2>About Us</h2><br>
+        <p>At Cozy Catering, we believe food is the heart of every celebration. With over 5 years of experience in
+          serving delicious, custom-crafted meals, we cater to events big and small. Whether it’s a wedding, birthday,
+          or corporate event, we bring taste, tradition, and a touch of elegance to every plate.</p>
+      </div>
+      <div class="about-img">
+        <img src="assets/about.png" alt="Cozy Catering Kitchen">
+      </div>
+    </section>
+
+    <hr>
+    <section class="events-section">
+      <h2>📅 Upcoming Events</h2>
+      <div class="event-cards">
+        <div class="event-card">
+          <img src="assets/wedding.png" alt="Wedding Event">
+          <h3>Wedding Showcase</h3>
+          <p><b>June 28, 2025</b><br>Experience our elegant wedding setups with sample tastings and décor previews.</p>
+        </div>
+        <div class="event-card">
+          <img src="assets/corporate-lunch.png" alt="Corporate Lunch">
+          <h3>Corporate Lunch Week</h3>
+          <p><b>July 10–14, 2025</b><br>Special corporate buffet packages for office gatherings and team events.</p>
+        </div>
+        <div class="event-card">
+          <img src="assets/family-fiesta.png" alt="Family Fiesta">
+          <h3>Family Fiesta</h3>
+          <p><b>August 5, 2025</b><br>A family-friendly tasting event with live counters, kids' menu, and more!</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    <!-- Featured Items -->
+    <section class="featured">
+      <h1>Popular Dishes</h1><br>
+      <div class="featured-items">
+        <div class="dish">
+          <img src="assets/paneer.png" alt="Paneer Tikka" height="150px" width="100px">
+          <h3>Paneer Tikka</h3>
+        </div>
+        <div class="dish">
+          <img src="assets/biryani.png" alt="Veg Biryani" height="150px" width="100px">
+          <h3>Veg Biryani</h3>
+        </div>
+        <div class="dish">
+          <img src="assets/pav-bhaji.png" alt="Pav Bhaji" height="150px" width="100px">
+          <h3>Pav Bhaji</h3>
+        </div>
+        <div class="dish">
+          <img src="assets/noodles.png" alt="Noodles" height="150px" width="100px">
+          <h3>Noodles</h3>
+        </div>
+        <div class="dish">
+          <img src="assets/south-Indian-foods.png" alt="South Indian Cuisine" height="150px" width="100px">
+          <h3>South Indian Cuisine</h3>
+        </div>
+        <div class="dish">
+          <img src="assets/deserts.png" alt="Deserts" height="150px" width="100px">
+          <h3>Deserts</h3>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    <!-- Testimonials Slider -->
+    <section class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial-card">
+          <p>“Cozy Catering made our wedding day unforgettable with their flawless service and flavorful food.”</p>
+          <strong>– Priya Sharma</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>“The best catering experience I've had! Professional staff and mouthwatering dishes.”</p>
+          <strong>– Arjun Mehta</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>“From booking to the final bite, everything was smooth and tasty. Highly recommended!”</p>
+          <strong>– Kavita Rao</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>“The live food counters at our event were a huge hit. Our guests still talk about it!”</p>
+          <strong>– Devansh Kulkarni</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>“We ordered a corporate lunch for 50+ people. Everything was fresh, hot, and delivered on time.”</p>
+          <strong>– Sneha Patil</strong>
+        </div>
+        <div class="testimonial-card">
+          <p>“Loved the vegetarian options! The Paneer Tikka and Biryani were absolutely delicious.”</p>
+          <strong>– Rohan Desai</strong>
+        </div>
+      </div>
+    </section>
+
+
+    <script>
+      const slider = document.querySelector('.testimonial-slider');
+      let scrollAmount = 0;
+
+      function autoScroll() {
+        scrollAmount += 1;
+        if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+          scrollAmount = 0;
+        }
+        slider.scrollTo({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+
+      setInterval(autoScroll, 30); // scrolls every 30ms
+    </script>
+
+
+    <footer>
+      <p>Follow us:</p>
+      <div class="social-icons">
+        <a href="#"><img src="assets/insta.png" alt="Instagram" height="20"></a>
+        <a href="#"><img src="assets/xlogo.png" alt="Twitter/X" height="20"></a>
+      </div>
+      <p>&copy; 2025 Cozy Catering. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="js/auth.js"></script>
+</body>
+
+</html>

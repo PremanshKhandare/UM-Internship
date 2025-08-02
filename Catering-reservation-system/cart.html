@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart - Cozy Catering</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Cozy Catering" class="logo">
+        <h1>Cozy Catering</h1>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">My Reservations</a>
+        <a href="#" id="logout-btn" style="display: none;">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 style="text-align: center; margin-top: 2rem;">🛒 Your Cart</h1>
+
+    <section class="cart-section">
+      <div id="cart-container"></div>
+      <div id="total-price" class="total-box"></div>
+      <button id="place-order-btn">Place Order</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cozy Catering. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/cart.js"></script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+
+</html>

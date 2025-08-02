@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GYM Login | Cozy Gym</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Firebase Compatibility Libraries -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore-compat.js"></script>
+
+</head>
+
+<body>
+  <div class="login-wrapper">
+    <div class="login-container">
+      <h2>GYM Login</h2>
+
+      <form onsubmit="login(); return false;">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <select id="role" required>
+          <option value="admin">Admin</option>
+          <option value="member">Member</option>
+          <option value="user">User</option>
+        </select>
+        <button type="submit">Login</button>
+      </form>
+
+      <p id="login-msg"></p>
+      <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </div>
+
+
+
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+
+</html>

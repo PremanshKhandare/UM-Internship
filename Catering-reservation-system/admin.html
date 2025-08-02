@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - Cozy Catering</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Cozy Catering" class="logo">
+        <h1>Cozy Catering</h1>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">Orders</a>
+        <button id="logoutBtn" class="btn-logout">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 style="text-align: center; margin-top: 2rem;">🛠️ Admin Dashboard</h1>
+
+    <section class="admin-section">
+      <h2>📋 Reservations</h2>
+      <div id="admin-reservations" class="admin-section-box"></div>
+
+      <h2>🛒 Orders</h2>
+      <div id="admin-orders" class="admin-section-box"></div>
+
+      <h2>🍽️ Menu Items</h2>
+      <div id="admin-products" class="admin-section-box"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cozy Catering. Admin Control Panel.</p>
+  </footer>
+
+  <script type="module">
+    import { auth } from './js/firebase.js';
+
+    // Logout logic
+    const logoutBtn = document.getElementById('logoutBtn');
+    logoutBtn.addEventListener('click', () => {
+      auth.signOut().then(() => {
+        alert("Logged out successfully!");
+        window.location.href = "login.html";
+      }).catch((error) => {
+        alert("Logout failed: " + error.message);
+      });
+    });
+  </script>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
